@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Email System</string>
     <string name="enter_your_mobile_number">Enter Your Phone Number</string>
     <string name="phone_page_info">Tap Next to verify your account with your phone number. You don\'t need to manualy enter verification code if the number install in this phone</string>
     <string name="next_button_phone_enter_page">next</string>

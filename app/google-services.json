@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "914949549516",
+    "project_id": "email-system---aos---uoh",
+    "storage_bucket": "email-system---aos---uoh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914949549516:android:52621639eda84b6d624169",
+        "android_client_info": {
+          "package_name": "com.sachinsah.emailsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914949549516-ae8mlq3slrbu0jfdva333km1gcparvn1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sachinsah.emailsystem",
+            "certificate_hash": "1cd797ded746495f3f3586b8729ef9e68b742c82"
+          }
+        },
+        {
+          "client_id": "914949549516-07kvu7bk60l1s0jh6ve9762egk8dfp78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1iy_uinfi-l8tnXgq6j4gkiXUZuQZVsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914949549516-07kvu7bk60l1s0jh6ve9762egk8dfp78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
