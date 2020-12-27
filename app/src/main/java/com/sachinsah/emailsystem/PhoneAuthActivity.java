@@ -25,7 +25,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import com.shuhart.stepview.StepView;
 import java.util.concurrent.TimeUnit;
 
-public class phoneAuthActivity extends AppCompatActivity {
+public class PhoneAuthActivity extends AppCompatActivity {
 
     LinearLayout layout1, layout2, layout3;
     StepView stepView;
@@ -44,7 +44,7 @@ public class phoneAuthActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_Phone_Auth);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -131,12 +131,12 @@ public class phoneAuthActivity extends AppCompatActivity {
         verifyOtpButton.setOnClickListener(view -> {
             String verificationCode = verifyCodeET.getText().toString();
             if (verificationCode.isEmpty()) {
-                Toast.makeText(phoneAuthActivity.this, "Enter verification code", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PhoneAuthActivity.this, "Enter verification code", Toast.LENGTH_SHORT).show();
             } else {
 
                 LayoutInflater inflater = getLayoutInflater();
                 View alertLayout = inflater.inflate(R.layout.processing_dialog, null);
-                AlertDialog.Builder show = new AlertDialog.Builder(phoneAuthActivity.this);
+                AlertDialog.Builder show = new AlertDialog.Builder(PhoneAuthActivity.this);
 
                 show.setView(alertLayout);
                 show.setCancelable(false);

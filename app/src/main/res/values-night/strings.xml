@@ -8,4 +8,6 @@
     <string name="i_didn_t_get_a_code">I didn\'t get a code</string>
     <string name="term_and_policy">Tap Continue to accept our Terms,Data Policy, cookie use and the Privacy Policy and Terms of Service...</string>
     <string name="phone_number_verfied">Congratulation, your number is verified click Continue to create your profile</string>
+
+    <string name="web_client_id">xxxxxxxx..place your web client id here</string>
 </resources>
