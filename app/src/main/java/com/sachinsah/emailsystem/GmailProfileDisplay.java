@@ -21,7 +21,7 @@ import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class EmailProfileDisplay  extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+public class GmailProfileDisplay extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     Button logoutBtn;
     TextView userName,userEmail,userId;
     ImageView profileImage;
@@ -100,7 +100,7 @@ public class EmailProfileDisplay  extends AppCompatActivity implements GoogleApi
         }
     }
     private void gotoMainActivity(){
-        Intent intent=new Intent(this,EmailAuthActivity.class);
+        Intent intent=new Intent(this, GmailAuthActivity.class);
         startActivity(intent);
     }
     @Override

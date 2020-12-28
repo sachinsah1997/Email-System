@@ -44,7 +44,7 @@ public class PhoneAuthActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_Phone_Auth);
+        setContentView(R.layout.activity_phone_auth);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -141,6 +141,7 @@ public class PhoneAuthActivity extends AppCompatActivity {
                 show.setView(alertLayout);
                 show.setCancelable(false);
                 dialog_verifying = show.create();
+                dialog_verifying.setMessage("Verifying please wait...");
                 dialog_verifying.show();
 
                 verifyPhoneNumberWithCode(mVerificationId, verificationCode);

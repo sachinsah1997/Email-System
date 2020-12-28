@@ -94,7 +94,7 @@
                 android:text="@string/phone_page_info"/>
             <Button
                 android:background="@color/colorAccent"
-                android:textColor="#fff"
+                android:textColor="@color/windowBackground"
                 android:textStyle="bold"
                 android:id="@+id/submit1"
                 android:layout_marginTop="50dp"
@@ -171,7 +171,7 @@
                 android:layout_marginTop="25dp"
                 android:background="@color/colorAccent"
                 android:textStyle="bold"
-                android:textColor="#fff"
+                android:textColor="@color/windowBackground"
                 android:id="@+id/submit2"
                 android:layout_marginEnd="20dp"
                 android:layout_marginStart="20dp"
@@ -224,9 +224,9 @@
             <Button
                 android:id="@+id/submit3"
                 android:layout_marginTop="20dp"
-                android:background="@color/colorAccent"
+                android:background="@color/colorPrimaryDark"
                 android:textStyle="bold"
-                android:textColor="#fff"
+                android:textColor="@color/windowBackground"
                 android:layout_marginEnd="20dp"
                 android:layout_marginStart="20dp"
                 android:layout_width="match_parent"
