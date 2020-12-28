@@ -14,10 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmailSystem">
-        <activity android:name=".EmailLoginActivity"/>
+        <activity android:name=".EmailLoginActivity" />
         <activity android:name=".EmailProfileActivity" />
         <activity android:name=".EmailAuthActivity" />
-        <activity android:name=".GmailAuthActivity">
+        <activity android:name=".GmailAuthActivity"/>
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

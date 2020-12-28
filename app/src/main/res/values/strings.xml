@@ -11,4 +11,5 @@
 
 
     <string name="web_client_id">xxxxxxxx..place your web client id here</string>
+    <string name="welcome_splash_screen">Welcome</string>
 </resources>

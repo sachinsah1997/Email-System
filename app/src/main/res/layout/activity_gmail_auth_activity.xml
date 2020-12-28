@@ -6,23 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".GmailAuthActivity">
 
-    <TextView
-        android:id="@+id/textViewClick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:textSize="50sp"
-        android:text="Welcome,"
-        android:padding="10dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="20dp"
-        android:layout_below="@+id/textViewClick">
-
-
+        android:layout_centerInParent="true">
 
         <Button
             android:id="@+id/textViewPhone"
