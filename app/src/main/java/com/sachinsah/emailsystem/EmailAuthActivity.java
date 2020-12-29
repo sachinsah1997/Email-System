@@ -103,7 +103,10 @@ public class EmailAuthActivity extends AppCompatActivity implements View.OnClick
                         //checking if success
                         if(task.isSuccessful()){
                             finish();
-                            startActivity(new Intent(getApplicationContext(), EmailLoginActivity.class));
+                            Intent intent = new Intent(EmailAuthActivity.this, StoreUserDetailActivity.class);
+                            intent.putExtra("emailId", email);
+                            intent.putExtra("type", "email");
+                            startActivity(intent);
                         }else{
                             //display some message here
                             Toast.makeText(EmailAuthActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
@@ -117,11 +120,11 @@ public class EmailAuthActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View view) {
 
-        if(view == buttonSignup){
+        if (view == buttonSignup) {
             registerUser();
         }
 
-        if(view == textViewSignin){
+        if (view == textViewSignin) {
             //open login activity when user taps on the already registered textview
             startActivity(new Intent(this, EmailLoginActivity.class));
         }

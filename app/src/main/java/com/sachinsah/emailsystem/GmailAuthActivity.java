@@ -23,13 +23,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.util.Objects;
+
 public class GmailAuthActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "GmailAuthActivity";
     private SignInButton signInButton;
     private GoogleApiClient googleApiClient;
     private static final int RC_SIGN_IN = 1;
-    String name, email;
+    String name, email, uri;
     String idToken;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
@@ -117,9 +119,11 @@ public class GmailAuthActivity extends AppCompatActivity implements GoogleApiCli
     private void handleSignInResult(GoogleSignInResult result){
         if(result.isSuccess()){
             GoogleSignInAccount account = result.getSignInAccount();
+            assert account != null;
             idToken = account.getIdToken();
             name = account.getDisplayName();
             email = account.getEmail();
+            uri = Objects.requireNonNull(account.getPhotoUrl()).toString();
             // you can store user data to SharedPreference
             AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
             firebaseAuthWithGoogle(credential);
@@ -151,8 +155,11 @@ public class GmailAuthActivity extends AppCompatActivity implements GoogleApiCli
     }
 
     private void gotoProfile(){
-        Intent intent = new Intent(GmailAuthActivity.this, GmailProfileDisplay.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        Intent intent = new Intent(GmailAuthActivity.this, StoreUserDetailActivity.class);
+        intent.putExtra("type", "gmail");
+        intent.putExtra("mailId", email);
+        intent.putExtra("name", name);
+        intent.putExtra("uri", uri);
         startActivity(intent);
         finish();
     }
@@ -162,6 +169,7 @@ public class GmailAuthActivity extends AppCompatActivity implements GoogleApiCli
         if (authStateListener != null){
             FirebaseAuth.getInstance().signOut();
         }
+        assert authStateListener != null;
         firebaseAuth.addAuthStateListener(authStateListener);
     }
 

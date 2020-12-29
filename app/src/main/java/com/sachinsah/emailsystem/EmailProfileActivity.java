@@ -41,6 +41,8 @@ public class EmailProfileActivity extends AppCompatActivity implements View.OnCl
 
         //initializing views
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
+
+
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
 
         //displaying logged in user name

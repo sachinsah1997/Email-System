@@ -1,5 +1,6 @@
 package com.sachinsah.emailsystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -159,6 +160,11 @@ public class PhoneAuthActivity extends AppCompatActivity {
             layout1.setVisibility(View.GONE);
             layout2.setVisibility(View.GONE);
             layout3.setVisibility(View.GONE);
+
+            Intent intent = new Intent(PhoneAuthActivity.this, StoreUserDetailActivity.class);
+            intent.putExtra("phoneNumber", phoneNumber);
+            intent.putExtra("type", "phone");
+            startActivity(intent);
         });
 
         reSendOtpTextView.setOnClickListener(v -> resendVerificationCode(phoneNumber, mResendToken));
